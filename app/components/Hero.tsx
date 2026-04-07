@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const roles = [
-  "Frontend Developer",
-  "Backend Developer",
-  "Data Analytics",
-  "SWE Intern",
+  "React Developer",
+  "Full-Stack Developer",
+  "Hackathon Winner",
+  "CS @ Trent University",
 ];
 
 export function Hero() {
@@ -53,9 +53,10 @@ export function Hero() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto"
         >
-          Passionate about building beautiful interfaces, scalable backends, and
-          finding insights in data. Currently seeking internship opportunities
-          for Summer 2025.
+          CS student at Trent University (3.9 GPA, Dean's Honour Roll) with a
+          passion for building full-stack applications and winning hackathons.
+          Recently won 1st place at Hack Days at Trent 2026. Currently seeking
+          SWE internship opportunities.
         </motion.p>
 
         <motion.div
