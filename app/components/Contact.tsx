@@ -17,12 +17,14 @@ export function Contact() {
     setStatus("sending");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
           name: formData.name,
           email: formData.email,
           message: formData.message,
@@ -36,9 +38,11 @@ export function Contact() {
         setFormData({ name: "", email: "", message: "" });
         setTimeout(() => setStatus("idle"), 3000);
       } else {
+        console.error("Web3Forms error:", result);
         setStatus("error");
       }
     } catch (error) {
+      console.error("Fetch error:", error);
       setStatus("error");
     }
   };
