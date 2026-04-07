@@ -34,7 +34,7 @@ export const projects: Project[] = [
     metric: "4,000+ movies tracked",
     github: "https://github.com/suhaqazi/aftercredits",
     live: "https://youtu.be/FbNFeYvCFLg",
-    image: ""
+    image: "/images/Aftercredits.png"
   },
   {
     id: "3",
@@ -46,6 +46,6 @@ export const projects: Project[] = [
     metric: "🎨 35% faster implementation",
     github: "",
     live: "https://hacktrent.ca",
-    image: ""
+    image: "/images/hacktrent.png"
   }
 ];
