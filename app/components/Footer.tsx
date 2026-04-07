@@ -45,6 +45,7 @@ export function Footer() {
               alt="Email"
               width={33}
               height={33}
+              loading="eager"
               className="filter brightness-0 invert opacity-70 hover:opacity-100 transition"
             />
           </a>
