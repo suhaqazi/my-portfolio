@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   children,
@@ -16,6 +17,7 @@ export default function RootLayout({
           <div className="orb-4" />
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
