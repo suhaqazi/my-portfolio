@@ -21,62 +21,80 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4">
-      <div className="text-center space-y-6 max-w-3xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-5xl md:text-7xl font-bold"
-        >
-          Hi, I'm{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Suha Qazi
-          </span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-400"
-        >
-          I'm a{" "}
-          <span className="text-blue-600 dark:text-blue-400 font-semibold inline-block min-w-[180px]">
-            {roles[roleIndex]}
-          </span>
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg"
-        >
-          CS student at Trent University (3.9 GPA) passionate about building
-          full-stack apps and solving real problems. Won 1st place at Hack Days
-          at Trent 2026 with FemFuel. Open to SWE internships for Summer 2025.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="flex gap-4 justify-center pt-4"
-        >
-          <a
-            href="#projects"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          {/* Left Side - Profile Photo */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex-shrink-0"
           >
-            View My Work
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition"
+            <div className="relative">
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+                <img
+                  src="/images/profile.jpeg"
+                  alt="Suha Qazi"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Decorative ring */}
+              <div className="absolute inset-0 rounded-full border-4 border-purple-500/30 -z-10 scale-110"></div>
+            </div>
+          </motion.div>
+
+          {/* Right Side - Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex-1 text-center md:text-left"
           >
-            Contact Me
-          </a>
-        </motion.div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Hi, I'm{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Suha Qazi
+              </span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-4">
+              I'm a{" "}
+              <span className="text-blue-600 dark:text-blue-400 font-semibold">
+                {roles[roleIndex]}
+              </span>
+            </p>
+
+            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              Computer Science with Specializing in Software Engineering student
+              at Trent University (3.9 GPA) passionate about building full-stack
+              apps and solving real problems. Won 1st place at Hack Days at
+              Trent 2026 with FemFuel. Open to SWE internships for Summer 2025.
+            </p>
+
+            <div className="flex gap-4 justify-center md:justify-start flex-wrap">
+              <a
+                href="#projects"
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition font-medium"
+              >
+                Contact Me
+              </a>
+              <a
+                href="/SuhaQazi_Resume.pdf"
+                download
+                className="px-6 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition font-medium"
+              >
+                Resume
+              </a>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
