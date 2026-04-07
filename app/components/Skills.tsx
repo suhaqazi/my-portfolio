@@ -14,25 +14,25 @@ export function Skills() {
     <section id="skills" className="py-20">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Technical Skills
+          <span className="text-[#ffa500]">Technical Skills</span>
         </h2>
-        <p className="text-gray-600 dark:text-gray-400 text-center mb-12">
+        <p className="text-gray-400 text-center mb-12">
           Technologies and tools I use to build projects
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(skillsData).map(([category, items]) => (
             <div
               key={category}
-              className="p-5 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-800"
+              className="p-5 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
             >
-              <h3 className="font-semibold text-lg mb-3 text-blue-600 dark:text-blue-400">
+              <h3 className="font-semibold text-lg mb-3 text-[#ffa500]">
                 {category}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {items.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm"
+                    className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300 text-sm"
                   >
                     {skill}
                   </span>

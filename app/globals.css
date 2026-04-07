@@ -2,19 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #0a0a0a;
+  color: #ededee;
+  overflow-x: hidden;
+}
+
+/* Background orbs - static, floating in place */
+.background-orbs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.orb-1 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.689) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: floatSlow 25s ease-in-out infinite;
+}
+
+.orb-2 {
+  position: absolute;
+  bottom: 10%;
+  right: -5%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(255, 250, 205, 0.51) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatSlow 30s ease-in-out infinite reverse;
+}
+
+.orb-3 {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(255, 166, 0, 0.513) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(70px);
+  animation: floatSlow 20s ease-in-out infinite;
+}
+
+.orb-4 {
+  position: absolute;
+  bottom: 35%;
+  left: 10%;
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, rgba(213, 210, 149, 0.526) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: floatSlow 35s ease-in-out infinite reverse;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(3%, 2%) scale(1.05);
+  }
+  66% {
+    transform: translate(-2%, 4%) scale(0.98);
+  }
 }
