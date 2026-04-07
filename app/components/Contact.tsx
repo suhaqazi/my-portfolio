@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -63,61 +62,34 @@ export function Contact() {
               Contact Info
             </h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/icons/email.svg"
-                  alt="Email"
-                  width={20}
-                  height={20}
-                  className="filter brightness-0 invert opacity-70"
-                />
-                <div>
-                  <p className="text-sm text-[#FBE4D8]/60">Email</p>
-                  <a
-                    href="mailto:suha.m.qazi@gmail.com"
-                    className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
-                  >
-                    suha.m.qazi@gmail.com
-                  </a>
-                </div>
+              <div>
+                <p className="text-sm text-[#FBE4D8]/60">Email</p>
+                <a
+                  href="mailto:suha.m.qazi@gmail.com"
+                  className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
+                >
+                  suha.m.qazi@gmail.com
+                </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/icons/github.svg"
-                  alt="GitHub"
-                  width={20}
-                  height={20}
-                  className="filter brightness-0 invert opacity-70"
-                />
-                <div>
-                  <p className="text-sm text-[#FBE4D8]/60">GitHub</p>
-                  <a
-                    href="https://github.com/suhaqazi"
-                    target="_blank"
-                    className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
-                  >
-                    github.com/suhaqazi
-                  </a>
-                </div>
+              <div>
+                <p className="text-sm text-[#FBE4D8]/60">GitHub</p>
+                <a
+                  href="https://github.com/suhaqazi"
+                  target="_blank"
+                  className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
+                >
+                  github.com/suhaqazi
+                </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src="/icons/linkedin.svg"
-                  alt="LinkedIn"
-                  width={20}
-                  height={20}
-                  className="filter brightness-0 invert opacity-70"
-                />
-                <div>
-                  <p className="text-sm text-[#FBE4D8]/60">LinkedIn</p>
-                  <a
-                    href="https://linkedin.com/in/suha-qazi"
-                    target="_blank"
-                    className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
-                  >
-                    linkedin.com/in/suha-qazi
-                  </a>
-                </div>
+              <div>
+                <p className="text-sm text-[#FBE4D8]/60">LinkedIn</p>
+                <a
+                  href="https://linkedin.com/in/suha-qazi"
+                  target="_blank"
+                  className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
+                >
+                  linkedin.com/in/suha-qazi
+                </a>
               </div>
             </div>
           </div>
