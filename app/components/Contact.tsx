@@ -46,47 +46,47 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-20 bg-[#2B124C]">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          <span className="text-[#ffb6c1]">Get In Touch</span>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#DFB6B2]">
+          Get In Touch
         </h2>
-        <p className="text-gray-400 text-center mb-12">
+        <p className="text-[#FBE4D8]/60 text-center mb-12">
           Looking for internship opportunities. Reach out!
         </p>
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Left side - Contact info */}
-          <div className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-            <h3 className="text-xl font-semibold mb-4 text-[#ffb6c1]">
+          <div className="p-6 rounded-xl bg-[#522B5B] border border-[#854F6C]">
+            <h3 className="text-xl font-semibold mb-4 text-[#DFB6B2]">
               Contact Info
             </h3>
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-gray-400">Email</p>
+                <p className="text-sm text-[#FBE4D8]/60">Email</p>
                 <a
                   href="mailto:suha.m.qazi@gmail.com"
-                  className="text-[#ffb6c1] hover:text-pink-300 transition"
+                  className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
                 >
                   suha.m.qazi@gmail.com
                 </a>
               </div>
               <div>
-                <p className="text-sm text-gray-400">GitHub</p>
+                <p className="text-sm text-[#FBE4D8]/60">GitHub</p>
                 <a
                   href="https://github.com/suhaqazi"
                   target="_blank"
-                  className="text-[#ffb6c1] hover:text-pink-300 transition"
+                  className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
                 >
                   github.com/suhaqazi
                 </a>
               </div>
               <div>
-                <p className="text-sm text-gray-400">LinkedIn</p>
+                <p className="text-sm text-[#FBE4D8]/60">LinkedIn</p>
                 <a
                   href="https://linkedin.com/in/suha-qazi"
                   target="_blank"
-                  className="text-[#ffb6c1] hover:text-pink-300 transition"
+                  className="text-[#DFB6B2] hover:text-[#FBE4D8] transition"
                 >
                   linkedin.com/in/suha-qazi
                 </a>
@@ -97,10 +97,10 @@ export function Contact() {
           {/* Right side - Contact form */}
           <form
             onSubmit={handleSubmit}
-            className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 space-y-4"
+            className="p-6 rounded-xl bg-[#522B5B] border border-[#854F6C] space-y-4"
           >
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-300">
+              <label className="block text-sm font-medium mb-1 text-[#FBE4D8]/80">
                 Name
               </label>
               <input
@@ -110,12 +110,12 @@ export function Contact() {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-black/50 border border-white/10 focus:border-[#ffb6c1] focus:ring-1 focus:ring-[#ffb6c1] text-white placeholder-gray-500 transition"
+                className="w-full px-4 py-2 rounded-lg bg-[#190019]/50 border border-[#854F6C] focus:border-[#DFB6B2] focus:ring-1 focus:ring-[#DFB6B2] text-[#FBE4D8] placeholder-[#FBE4D8]/40 transition"
                 placeholder="Your name"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-300">
+              <label className="block text-sm font-medium mb-1 text-[#FBE4D8]/80">
                 Email
               </label>
               <input
@@ -125,12 +125,12 @@ export function Contact() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-black/50 border border-white/10 focus:border-[#ffb6c1] focus:ring-1 focus:ring-[#ffb6c1] text-white placeholder-gray-500 transition"
+                className="w-full px-4 py-2 rounded-lg bg-[#190019]/50 border border-[#854F6C] focus:border-[#DFB6B2] focus:ring-1 focus:ring-[#DFB6B2] text-[#FBE4D8] placeholder-[#FBE4D8]/40 transition"
                 placeholder="your@email.com"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1 text-gray-300">
+              <label className="block text-sm font-medium mb-1 text-[#FBE4D8]/80">
                 Message
               </label>
               <textarea
@@ -140,14 +140,14 @@ export function Contact() {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-black/50 border border-white/10 focus:border-[#ffb6c1] focus:ring-1 focus:ring-[#ffb6c1] text-white placeholder-gray-500 transition"
+                className="w-full px-4 py-2 rounded-lg bg-[#190019]/50 border border-[#854F6C] focus:border-[#DFB6B2] focus:ring-1 focus:ring-[#DFB6B2] text-[#FBE4D8] placeholder-[#FBE4D8]/40 transition"
                 placeholder="Your message here..."
               />
             </div>
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full px-4 py-2 rounded-lg bg-[#ffb6c1] text-black font-medium hover:bg-pink-400 disabled:opacity-50 transition"
+              className="w-full px-4 py-2 rounded-lg bg-[#DFB6B2] text-[#190019] font-medium hover:bg-[#854F6C] hover:text-[#FBE4D8] disabled:opacity-50 transition"
             >
               {status === "sending" ? "Sending..." : "Send Message"}
             </button>

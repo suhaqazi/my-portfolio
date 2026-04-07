@@ -32,14 +32,14 @@ export function Hero() {
             className="flex-shrink-0"
           >
             <div className="relative">
-              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#ffb6c1] shadow-xl">
+              <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#DFB6B2] shadow-xl">
                 <img
                   src="/images/profile.jpeg"
                   alt="Suha Qazi"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute inset-0 rounded-full border-4 border-[#ffb6c1]/30 -z-10 scale-110"></div>
+              <div className="absolute inset-0 rounded-full border-4 border-[#DFB6B2]/30 -z-10 scale-110"></div>
             </div>
           </motion.div>
 
@@ -50,18 +50,18 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex-1 text-center md:text-left"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-              Hi, I'm <span className="text-[#ffb6c1]">Suha Qazi</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Hi, I'm <span className="text-[#DFB6B2]">Suha Qazi</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-4">
+            <p className="text-xl md:text-2xl text-[#FBE4D8]/70 mb-4">
               I'm a{" "}
-              <span className="text-[#ffb6c1] font-semibold">
+              <span className="text-[#DFB6B2] font-semibold">
                 {roles[roleIndex]}
               </span>
             </p>
 
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-[#FBE4D8]/60 mb-6 leading-relaxed">
               Computer Science with Specializing in Software Engineering student
               at Trent University (3.9 GPA) passionate about building full-stack
               apps and solving real problems. Won 1st place at Hack Days at
@@ -71,20 +71,20 @@ export function Hero() {
             <div className="flex gap-4 justify-center md:justify-start flex-wrap">
               <a
                 href="#projects"
-                className="px-6 py-3 bg-[#ffb6c1] text-black rounded-lg hover:bg-pink-400 transition font-medium"
+                className="px-6 py-3 bg-[#DFB6B2] text-[#190019] rounded-lg hover:bg-[#854F6C] hover:text-[#FBE4D8] transition font-medium"
               >
                 View My Work
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 border border-[#ffb6c1] text-[#ffb6c1] rounded-lg hover:bg-pink-500/10 transition font-medium"
+                className="px-6 py-3 border border-[#DFB6B2] text-[#DFB6B2] rounded-lg hover:bg-[#DFB6B2]/10 transition font-medium"
               >
                 Contact Me
               </a>
               <a
                 href="/SuhaQazi_Resume.pdf"
                 download
-                className="px-6 py-3 border border-gray-600 text-gray-300 rounded-lg hover:bg-white/5 transition font-medium"
+                className="px-6 py-3 border border-[#854F6C] text-[#FBE4D8] rounded-lg hover:bg-[#854F6C]/20 transition font-medium"
               >
                 Resume
               </a>
