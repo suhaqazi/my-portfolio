@@ -7,7 +7,7 @@ const roles = [
   "React Developer",
   "Full-Stack Developer",
   "Hackathon Winner",
-  "CS @ Trent University",
+  "CS Student @ Trent University",
 ];
 
 export function Hero() {
@@ -51,12 +51,11 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto"
+          className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg"
         >
-          CS student at Trent University (3.9 GPA, Dean's Honour Roll) with a
-          passion for building full-stack applications and winning hackathons.
-          Recently won 1st place at Hack Days at Trent 2026. Currently seeking
-          SWE internship opportunities.
+          CS student at Trent University (3.9 GPA) passionate about building
+          full-stack apps and solving real problems. Won 1st place at Hack Days
+          at Trent 2026 with FemFuel. Open to SWE internships for Summer 2025.
         </motion.p>
 
         <motion.div
