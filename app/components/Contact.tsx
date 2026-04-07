@@ -16,13 +16,33 @@ export function Contact() {
     e.preventDefault();
     setStatus("sending");
 
-    // Simulate sending (will connect to real email later)
-    setTimeout(() => {
-      console.log("Message from:", formData);
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1000);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 3000);
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   };
 
   return (
@@ -122,12 +142,12 @@ export function Contact() {
             </button>
             {status === "success" && (
               <p className="text-green-600 text-sm text-center">
-                Message sent! I'll reply soon.
+                ✓ Message sent! I'll reply soon.
               </p>
             )}
             {status === "error" && (
               <p className="text-red-600 text-sm text-center">
-                Something went wrong. Try emailing directly.
+                ✗ Failed to send. Try emailing directly.
               </p>
             )}
           </form>
